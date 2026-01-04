@@ -79,4 +79,4 @@ if st.sidebar.button('Predict Salary'):
 for j in range(len(features),len(axes)):
         fig.delaxes(axes[j])
 
-        st.pyplot(fig)       
+st.pyplot(fig)       
