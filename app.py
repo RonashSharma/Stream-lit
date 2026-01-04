@@ -71,12 +71,12 @@ if st.sidebar.button('Predict Salary'):
             scatter_kws={'color':'blue','alpha':0.7},
             line_kws={'color':'red'},
             ax=axes[i]
-    )
-        axes[i].set_title(f'{feature} vs Salary')
-        axes[i].set_xlabel(feature)
-        axes[i].set_ylabel('Salary')
+        )
+    axes[i].set_title(f'{feature} vs Salary')
+    axes[i].set_xlabel(feature)
+    axes[i].set_ylabel('Salary')
 
 for j in range(len(features),len(axes)):
-        fig.delaxes(axes[j])
+    fig.delaxes(axes[j])
 
 st.pyplot(fig)       
