@@ -49,22 +49,22 @@ if st.sidebar.button('Predict Salary'):
     st.header('Visualization')
     st.subheader('Feature vs Salary')
 
-    fig,ax=plt.subplots()
-    sns.regplot(
-        x=X['EngagementSurvey'],
-        y=Y,
-        scatter_kws={'color':'blue','alpha':0.7},
-        line_kws={'color':'red'},
-        ax=ax
-    )
-    ax.set_xlabel('Engagement_Survey')
-    ax.set_ylabel('Salary')
-    st.pyplot(fig)
+fig,ax=plt.subplots()
+sns.regplot(
+    x=X['EngagementSurvey'],
+    y=Y,
+    scatter_kws={'color':'blue','alpha':0.7},
+    line_kws={'color':'red'},
+    ax=ax
+)
+ax.set_xlabel('Engagement_Survey')
+ax.set_ylabel('Salary')
+st.pyplot(fig)
 
-    fig,axes= plt.subplots(2,2, figsize=(10,7))
-    axes=axes.flatten()
+fig,axes= plt.subplots(2,2, figsize=(10,7))
+axes=axes.flatten()
 
-    for i, feature in enumerate(features):
+for i, feature in enumerate(features):
         sns.regplot(
             x=X[feature],
             y=Y,
@@ -72,9 +72,9 @@ if st.sidebar.button('Predict Salary'):
             line_kws={'color':'red'},
             ax=axes[i]
         )
-    axes[i].set_title(f'{feature} vs Salary')
-    axes[i].set_xlabel(feature)
-    axes[i].set_ylabel('Salary')
+axes[i].set_title(f'{feature} vs Salary')
+axes[i].set_xlabel(feature)
+axes[i].set_ylabel('Salary')
 
 # for j in range(len(features),len(axes)):
 #     fig.delaxes(axes[j])
