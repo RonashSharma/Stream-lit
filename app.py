@@ -76,7 +76,7 @@ if st.sidebar.button('Predict Salary'):
     axes[i].set_xlabel(feature)
     axes[i].set_ylabel('Salary')
 
-for j in range(len(features),len(axes)):
-    fig.delaxes(axes[j])
+# for j in range(len(features),len(axes)):
+#     fig.delaxes(axes[j])
 
 st.pyplot(fig)       
