@@ -42,7 +42,7 @@ if st.sidebar.button('Predict Salary'):
 
     st.success('Prediction Successful')
     st.metric(
-        label='Predicted Salary',
+        label='Predicted Salary Of Employee',
         value=f'Rs{prediction:,.2f}'
     )
     # visualization
